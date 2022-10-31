@@ -1,0 +1,48 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: library_hours
+  examples: |
+    - What are the library hours?
+    - When does the library closes?
+    - When does the library opens?
+
+- intent: printing
+  examples: |
+    - How can I print at the library?
+    - Can I use the printers at the library?
+    - Can I color print at the library?
+
+- intent: room_reservation
+  examples: |
+    - How can I reserve a study room?
+    - Can I reserve a room at the library?
+
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later

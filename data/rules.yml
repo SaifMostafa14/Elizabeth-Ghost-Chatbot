@@ -1,0 +1,32 @@
+version: "3.1"
+
+rules:
+
+  #  - rule: Say greet anytime the user says greet
+  #    steps:
+  #      - intent: greet
+  #      - intent: utter_goodbye
+  #
+  #  - rule: Say library_hours whenever the user says library_hours
+  #    steps:
+  #      - intent: library_hours
+  #      - action: utter_library_hours
+  #
+  #  - rule: Say printing whenever the user says printing
+  #    steps:
+  #      - intent: printing
+  #      - action: utter_printing
+  #
+  #  - rule: Say room_reservation whenever the user says room_reservation
+  #    steps:
+  #      - intent: room_reservation
+  #      - action: utter_room_reservation
+  #
+  - rule: Say goodbye anytime the user says goodbye
+    steps:
+    - intent: goodbye
+    - action: utter_goodbye
+  - rule: hello world
+    steps:
+    - intent: greet
+    - action: action_hello_world

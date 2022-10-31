@@ -1,0 +1,24 @@
+version: "3.1"
+
+stories:
+
+  - story: greet and library hours
+    steps:
+    - intent: greet
+    - action: action_hello_world
+    - intent: library_hours
+    - action: action_library_hours
+
+  - story: greet and printing
+    steps:
+    - intent: greet
+    - action: action_hello_world
+    - intent: printing
+    - action: action_printing
+      
+  - story: greet and room_reservation
+    steps:
+    - intent: greet
+    - action: action_hello_world
+    - intent: room_reservation
+    - action: action_room_reservation

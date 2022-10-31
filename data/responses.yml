@@ -1,0 +1,20 @@
+responses:
+   utter_greet:
+       - text: |
+           Hello! How can I help you?
+       - text: |
+           Hi!
+   utter_library_hours:
+       - text: |
+           It opens at 8 am and closes at midnight.
+       - text: |
+           The library opens at 8 am and closes at midnight Monday to Thursday. On Friday 8 AM to 6 PM. On Saturday 10 AM to 6 PM And on Sunday 11 AM to Midnight.
+   utter_printing:
+       - text: |
+            You can use the printers located on the main floor with your 800-number. Visit https://printing.stetson.edu/user and upload the documents you with to print to the website.
+   utter_room_reservation:
+        - text: |
+            You can reserve a study room at the library through this link https://www2.stetson.edu/library/services/reserve-a-library-room/
+   utter_goodbye:
+        - text: |
+            Bye, have a good day
