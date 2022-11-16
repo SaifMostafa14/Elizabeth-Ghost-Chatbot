@@ -8,12 +8,23 @@ intents:
 - printing
 - room_reservation
 - goodbye
+- out_of_scope
 #slots:
 #  email:
 #    type: text
 #    influence_conversation: false
 #    mappings: []
-#responses:
+responses:
+  utter_out_of_scope: 
+    - text: Sorry, I can't handle that request
+      #  utter_please_rephrase: 
+      #    - text: I'm sorry, I dont understand that. Could you rephrase please? 
+
+      #  utter_ask_rephrase: 
+      #    - text: I am sorry, I didn't quite understand that. Could you rephrase?
+
+      #  utter_default: 
+      #    - text: I am sorry, I can't help you
 #  utter_greet:
 #  - text: |
 #      Hello! How can I help you?
@@ -31,7 +42,10 @@ actions:
 - action_library_hours
 - action_printing
 - action_room_reservation
-
+- action_goodbye
+  #- action_out_of_scope
+- action_default_fallback
+  #- action_two_stage_fallback
 #- '...'
 #- utter_greet
 #- utter_subscribed

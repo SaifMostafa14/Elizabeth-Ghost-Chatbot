@@ -45,4 +45,11 @@ nlu:
     - have a nice day
     - see you around
     - bye bye
-    - see you later
+    - see you later 
+
+- intent: out_of_scope
+  examples: |
+    - I want to register for classes
+    - What is the dinning hours? 
+    - How to schedule an appointment with the health services
+    

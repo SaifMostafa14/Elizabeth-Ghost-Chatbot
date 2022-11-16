@@ -7,26 +7,44 @@ rules:
   #      - intent: greet
   #      - intent: utter_goodbye
   #
-  #  - rule: Say library_hours whenever the user says library_hours
-  #    steps:
-  #      - intent: library_hours
-  #      - action: utter_library_hours
-  #
-  #  - rule: Say printing whenever the user says printing
-  #    steps:
-  #      - intent: printing
-  #      - action: utter_printing
-  #
-  #  - rule: Say room_reservation whenever the user says room_reservation
-  #    steps:
-  #      - intent: room_reservation
-  #      - action: utter_room_reservation
-  #
+  - rule: Say library_hours whenever the user says library_hours
+    steps:
+    - intent: library_hours
+    - action: action_library_hours
+  
+  - rule:  printing
+    steps:
+    - intent: printing
+    - action: action_printing
+
+  - rule: room reservation 
+    steps:
+    - intent: room_reservation
+    - action: action_room_reservation
+  
   - rule: Say goodbye anytime the user says goodbye
     steps:
     - intent: goodbye
-    - action: utter_goodbye
+    - action: action_goodbye
+
   - rule: hello world
     steps:
     - intent: greet
     - action: action_hello_world
+
+      #  - rule: out_of_scope
+      #    steps:
+      #    - intent: out_of_scope
+      #    - action: utter_out_of_scope
+
+      #  - rule: Ask the user to rephrase whenever they send a message with low NLU confidence
+      #    steps:
+      #    - intent: nlu_fallback
+      #    - action: utter_please_rephrase
+      
+  - rule: Implementation of the two-stage-fallback
+    steps:
+    - intent: nlu_fallback
+    - action: action_two_stage_fallback
+    - active_loop: action_two_stage_fallback
+

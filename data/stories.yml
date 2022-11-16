@@ -8,6 +8,8 @@ stories:
     - action: action_hello_world
     - intent: library_hours
     - action: action_library_hours
+    - intent: goodbye
+    - action: action_goodbye
 
   - story: greet and printing
     steps:
@@ -15,6 +17,8 @@ stories:
     - action: action_hello_world
     - intent: printing
     - action: action_printing
+    - intent: goodbye
+    - action: action_goodbye
       
   - story: greet and room_reservation
     steps:
@@ -22,3 +26,6 @@ stories:
     - action: action_hello_world
     - intent: room_reservation
     - action: action_room_reservation
+    - intent: goodbye
+    - action: action_goodbye
+

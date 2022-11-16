@@ -1,0 +1,38 @@
+version: "3.1"
+
+stories:
+
+  - story: greet and library hours
+    steps:
+    - intent: greet
+    - action: action_hello_world
+    - intent: library_hours
+    - action: action_library_hours
+    - intent: goodbye
+    - action: action_goodbye
+
+  - story: greet and printing
+    steps:
+    - intent: greet
+    - action: action_hello_world
+    - intent: printing
+    - action: action_printing
+    - intent: goodbye
+    - action: action_goodbye
+      
+  - story: greet and room_reservation
+    steps:
+    - intent: greet
+    - action: action_hello_world
+    - intent: room_reservation
+    - action: action_room_reservation
+    - intent: goodbye
+    - action: action_goodbye
+
+  - story: greet and fallback
+    steps:
+    - intent: greet
+    - action: action_hello_world
+    - intent: out_of_scope
+    - action: action_ask_rephrase
+
