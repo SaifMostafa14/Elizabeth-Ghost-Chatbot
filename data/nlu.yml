@@ -1,6 +1,12 @@
 version: "3.1"
 
 nlu:
+- intent: library_hours
+  examples: |
+    - What are the library hours?
+    - When does the library closes?
+    - When does the library opens?
+
 - intent: greet
   examples: |
     - hey
@@ -16,12 +22,6 @@ nlu:
     - goodmorning
     - goodevening
     - good afternoon
-
-- intent: library_hours
-  examples: |
-    - What are the library hours?
-    - When does the library closes?
-    - When does the library opens?
 
 - intent: printing
   examples: |

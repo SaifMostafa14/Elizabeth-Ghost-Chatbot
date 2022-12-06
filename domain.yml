@@ -9,14 +9,17 @@ intents:
 - room_reservation
 - goodbye
 - out_of_scope
-#slots:
-#  email:
-#    type: text
-#    influence_conversation: false
-#    mappings: []
-responses:
-  utter_out_of_scope: 
-    - text: Sorry, I can't handle that request
+
+actions:
+- action_hello_world
+- action_library_hours
+- action_printing
+- action_room_reservation
+- action_goodbye
+  #- action_out_of_scope
+- action_default_fallback
+  #- action_two_stage_fallback
+
       #  utter_please_rephrase: 
       #    - text: I'm sorry, I dont understand that. Could you rephrase please? 
 
@@ -37,15 +40,6 @@ responses:
 #  - text: |
 #      Check your inbox at {email} in order to finish subscribing to the newsletter!
 #  - text: You're all set! Check your inbox at {email} to confirm your subscription.
-actions:
-- action_hello_world
-- action_library_hours
-- action_printing
-- action_room_reservation
-- action_goodbye
-  #- action_out_of_scope
-- action_default_fallback
-  #- action_two_stage_fallback
 #- '...'
 #- utter_greet
 #- utter_subscribed
