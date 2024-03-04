@@ -57,8 +57,6 @@ def webscraping(keyword):
 
 
 
-#openai.api_key = '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'
-
 prompt = """
 
 Greet the user and ask them how you can help them today
