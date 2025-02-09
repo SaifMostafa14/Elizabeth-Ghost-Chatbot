@@ -1,19 +1,22 @@
 from openai import OpenAI
 import os
 from selenium import webdriver
+from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 import csv
 
-client = OpenAI()
+
+client = OpenAI(
+)
 
 def webscraping(keyword):
     # Set up the Selenium webdriver (you'll need to download and install the appropriate webdriver for your browser)
 
-    chrome_path = '/usr/local/bin/chromedriver'
-    service = Service(executable_path=chrome_path)
+    # chrome_path = '/usr/local/bin/chromedriver'
+    service = Service(ChromeDriverManager().install())
     service.start()
 
     driver = webdriver.Chrome(service=service)
@@ -22,7 +25,7 @@ def webscraping(keyword):
     url = "https://stetson.on.worldcat.org/search?queryPrefix=kw%3A&queryString=kw%3A"+ keyword+ "&scope=wz%3A4369&expandSearch=off&translateSearch=off"
     driver.get(url)
 
-    wait = WebDriverWait(driver, 60)  # Maximum wait time in seconds
+    wait = WebDriverWait(driver, 30)  # Maximum wait time in seconds
 
     book_list_Xpath = '//*[@id="dui-main-content-area"]/div/div/div/div/div[2]/div/div[1]/ul'
     book_list_element = wait.until(EC.presence_of_element_located((By.XPATH, book_list_Xpath)))
@@ -555,4 +558,3 @@ Z,"Bibliography, Library Science. Information resources (general)",2nd
 
     else:
         print("I am sorry I have no clue what to do")
-

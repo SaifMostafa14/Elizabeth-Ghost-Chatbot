@@ -7,8 +7,8 @@ import csv
 
 def webscraping(keyword):
     # Set up the Selenium webdriver (you'll need to download and install the appropriate webdriver for your browser)
-    chrome_path = '/home/smostafa/openai/chromedriver'
-    service = Service(executable_path=chrome_path)
+    # chrome_path = '/usr/local/bin/chromedriver'
+    service = Service(ChromeDriverManager().install())
     service.start()
 
     driver = webdriver.Chrome(service=service)
