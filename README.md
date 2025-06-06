@@ -32,6 +32,3 @@ Install the Python dependencies (for example via `pip install openai selenium`).
    ```
 
 The script will greet you and wait for your questions. Type `stop`, `quit` or `exit` to end the session.
-
-The helper scripts `webscraping.py` and `dataclean.py` were used during development for collecting and processing library catalogue data. They are optional and not required for normal operation.
-
