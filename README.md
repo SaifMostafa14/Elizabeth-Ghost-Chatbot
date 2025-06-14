@@ -1,10 +1,15 @@
 # Elizabeth Ghost Chatbot
 
-This repository contains two approaches for a library chatbot project. The initial concept used **Rasa** for intent recognition and dialogue management, while the final solution relies on **OpenAI** language models.
+This repository contains two approaches for a library chatbot project. The original prototype used **Rasa** for intent recognition and dialogue management, while the final solution relies on **OpenAI** language models.
+
+The codebase is now organised into two directories:
+
+- [`rasa/`](rasa/) – the historical Rasa project
+- [`openai/`](openai/) – the active OpenAI implementation
 
 ## Rasa prototype
 
-The files at the repository root (`actions/`, `data/`, `domain.yml`, etc.) are the remains of an early experiment using [Rasa](https://rasa.com/). That prototype is no longer actively maintained, but the configuration and training data remain for reference.
+The directory [`rasa/`](rasa/) contains the remains of an early experiment using [Rasa](https://rasa.com/). That prototype is no longer actively maintained, but the configuration and training data remain for reference.
 
 ## Final project: OpenAI implementation
 
